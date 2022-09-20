@@ -1,7 +1,7 @@
 import {request, gql} from "graphql-request"
 
 
-const graphqlAPI="https://api-ap-southeast-2.hygraph.com/v2/cl894rpjx210p01uh531e266n/master"
+const graphqlAPI="https://api-ap-southeast-2.hygraph.com/v2/cl8aqmqln01or01ui0b3jem5a/master"
 
 export const getPosts= async()=>{
     const query= gql`
