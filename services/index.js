@@ -1,7 +1,7 @@
 import {request, gql} from "graphql-request"
 
 
-const graphqlAPI="https://api-ap-southeast-2.hygraph.com/v2/cl8aqmqln01or01ui0b3jem5a/master"
+const graphqlAPI="https://api-ap-southeast-2.hygraph.com/v2/cl8d1nm7c17z801ul2f2whzuw/master"
 
 export const getPosts= async()=>{
     const query= gql`
@@ -46,6 +46,7 @@ export const getSearchedPost= async(phrase)=>{
  query GetSearchedPost($phrase: String){
   posts(where: {title_contains: $phrase}) {
     title
+    slug
     featuredImage {
       url
     }

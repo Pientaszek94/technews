@@ -26,12 +26,12 @@ function PostWidget({slug, categories}) {
     },[])
 
 
-    console.log("Recent Posts", relatedPosts)
+  
 
   return (
     <div className='rounded-lg bg-white shadow-lg lg:p-2 lg:p-8 pb-12 p-4 mb-6 mt-4'>
           <h2 className='font-semibold text-left'>
-            {slug?"You may also like": "Recent Posts"}
+            {slug?"You may also like": "Fresh Articles"}
           </h2>
 
           <div className=''>

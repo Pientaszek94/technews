@@ -28,7 +28,7 @@ let pageSize=6
 
 function CategorySite({category}) {
 
-  console.log("Kategoria", category);
+
 
 
   const [currentPage, setCurrentPage] = useState(1);

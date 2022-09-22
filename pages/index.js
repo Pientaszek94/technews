@@ -23,7 +23,6 @@ let pageSize= 5;
 
 
 export default function Home({posts}) {
-  console.log("Posty: ", posts)
 
 
   const [currentPage, setCurrentPage] = useState(1);
@@ -41,7 +40,7 @@ export default function Home({posts}) {
   return (
     <div className='container mx-auto lg:px-28 mb-8 z-0'>
       <Head>
-        <title>Flash News</title>
+        <title>Tech News</title>
         <meta name="description" content="Keep being posted" />
         <link rel="icon" href="/favicon.ico" />
       </Head>

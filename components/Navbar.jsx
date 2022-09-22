@@ -1,4 +1,5 @@
 import moment from 'moment'
+import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
 import { getSearchedPost } from '../services'
 import Logo from './Logo'
@@ -89,9 +90,10 @@ function Navbar() {
                                   {
                                     searchedPosts!==[]?
                                       searchedPosts.map((post)=>(
+                                      <Link key={post.title} href={`/post/${post.slug}`}>
 
                                        <div key={post.title} className='text-black 
-                                       border-b-2 hover:bg-gray-200 px-2'>
+                                       border-b-2 hover:bg-gray-200 px-2 cursor-pointer'>
 
                                           <h1 className='lg:text-lg text-sm font-semibold'>{post.title}</h1>
 
@@ -100,6 +102,8 @@ function Navbar() {
                                           </h2>
 
                                        </div> 
+                                      
+                                      </Link>
                                       )):null
                                   }
                               </div>
@@ -108,11 +112,11 @@ function Navbar() {
 
                         </div>
                     </div>
-                    <ul className='flex flex-row lg:flex-col justify-center items-center px-4'>
-                      <li className='w-4 h-4 rounded-full overlow-hidden flex justify-center items-center lg:m-2 mx-2 m-1'>
+                    <ul className='flex flex-col justify-center items-center px-4'>
+                      <li className='lg:w-4 lg:h-4 w- h-2 flex justify-center items-center m-2'>
                         <a href="https://www.facebook.com/" className="fa fa-facebook text-white h-4 w-4 rounded-full"></a> 
                       </li>
-                      <li className='w-4 h-4 rounded-full flex flex-row items-center'>
+                      <li className='lg:w-4 lg:h-4 w-2 h-2 flex justify-center items-center m-2'>
                         <a href="https://www.instagram.com/" className="fa fa-instagram text-white rounded-full w-full lg:m-2  mx-2 h-4"></a>   
                       </li>
                     </ul>
